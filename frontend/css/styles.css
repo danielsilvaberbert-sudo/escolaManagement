@@ -1,0 +1,17 @@
+/* frontend/css/styles.css */
+.auth-container {
+  min-height: 100vh;
+  background-color: #f8f9fa;
+}
+
+.card {
+  transition: all 0.3s ease;
+}
+
+.card:hover {
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
+}
+
+.animate__animated {
+  animation-duration: 0.5s;
+}

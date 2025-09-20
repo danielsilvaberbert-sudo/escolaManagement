@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Catecismo | Opções</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body { background-color: #f8f9fa; }
+  </style>
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <div class="container-fluid">
+      <span class="navbar-brand" id="userName">Catecismo | Opções</span>
+      <button class="btn btn-outline-light btn-sm" id="logoutBtn">Sair</button>
+    </div>
+  </nav>
+
+  <div class="container mt-4">
+    <div id="alert" class="alert alert-danger d-none"></div>
+    <h3 id="welcomeMsg"></h3>
+
+    <!-- Conteúdo para Administrador -->
+    <div id="adminContent" class="mt-4 d-none">
+      <h4>Gerenciamento</h4>
+      <div class="d-flex gap-2 flex-wrap">
+        <a href="/api/usuarios" class="btn btn-success">Usuário</a>
+        <a href="/api/calendario" class="btn btn-info">Cadastrar Calendário</a>
+        <a href="/api/disciplinas/cadastrar" class="btn btn-warning">Cadastrar Disciplina</a>
+        <a href="/api/alunos" class="btn btn-warning">Cadastrar Aluno</a>
+      </div>
+    </div>
+
+    <!-- Conteúdo para Instrutor -->
+    <div id="instrutorContent" class="mt-4 d-none">
+      <h4>Minhas Disciplinas</h4>
+      <ul id="disciplinasList" class="list-group"></ul>
+    </div>
+  </div>
+
+  <script src="/js/dashboard.js" defer></script>
+</body>
+</html>
